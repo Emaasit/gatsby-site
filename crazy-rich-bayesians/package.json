@@ -1,0 +1,74 @@
+{
+  "name": "gatsby-starter-blog-tachyons",
+  "description": "Gatsby Starter Blog Tachyons",
+  "author": "Vaibhav Sharma",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "lint": "eslint --ext js,jsx --ignore-path .gitignore . --fix",
+    "clean": "rm -rf public/ .cache/"
+  },
+  "dependencies": {
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.1.1",
+    "gatsby": "^2.0.91",
+    "gatsby-image": "^2.0.26",
+    "gatsby-paginate": "^1.0.16",
+    "gatsby-plugin-feed": "^2.0.11",
+    "gatsby-plugin-google-tagmanager": "^2.0.7",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-netlify": "^2.0.6",
+    "gatsby-plugin-netlify-cms": "^3.0.9",
+    "gatsby-plugin-nprogress": "^2.0.7",
+    "gatsby-plugin-offline": "^2.0.21",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sass": "^2.0.7",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-sitemap": "^2.0.4",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-remark-relative-images": "^0.2.1",
+    "gatsby-source-filesystem": "^2.0.16",
+    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-sharp": "^2.1.10",
+    "lodash": "^4.17.11",
+    "lodash-webpack-plugin": "^0.11.5",
+    "netlify-cms": "^2.3.3",
+    "node-sass": "^4.11.0",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-disqus-comments": "^1.4.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-share": "^2.4.0",
+    "tachyons-sass": "^4.9.5",
+    "uglifyjs-webpack-plugin": "^2.1.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-blog"
+  ],
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-config-standard-trailing-commas": "^6.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "remark-cli": "^6.0.1",
+    "remark-preset-lint-recommended": "^3.0.2"
+  }
+}
