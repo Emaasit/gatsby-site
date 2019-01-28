@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+require(`katex/dist/katex.min.css`)
+
 class TagRoute extends Component {
   render () {
     const posts = this.props.data.allMarkdownRemark.edges

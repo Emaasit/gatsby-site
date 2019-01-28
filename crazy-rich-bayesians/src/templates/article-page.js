@@ -9,6 +9,8 @@ import Share from '../components/Share'
 import 'prismjs/themes/prism-tomorrow.css'
 import Layout from '../components/Layout'
 
+require(`katex/dist/katex.min.css`)
+
 const ArticlePage = ({ data }) => {
   const { markdownRemark: post } = data
   return (

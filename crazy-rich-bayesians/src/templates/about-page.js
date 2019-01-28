@@ -7,6 +7,8 @@ import AboutPageTemplate from '../components/AboutPageTemplate'
 import { HTMLContent } from '../components/Content'
 import Layout from '../components/Layout'
 
+require(`katex/dist/katex.min.css`)
+
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
 
