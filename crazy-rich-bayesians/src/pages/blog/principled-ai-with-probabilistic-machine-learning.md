@@ -34,11 +34,11 @@ This has resulted in a principled approach to machine learning based on probabil
 <h3>Probabilistic Machine Learning</h3>
 In general, Probabilistic Machine Learning can be defined as an interdisciplinary field focusing on both the mathematical foundations and practical applications of systems that learn <strong>models</strong> from data. It brings together ideas from Statistics, Computer Science, Engineering and Cognitive Science as illustrated in the Figure below.
 
-<img class="wp-image-6502 size-medium" src="http://haystax.com/wp-content/uploads/2018/05/Screen_Shot_2018-04-25_at_1.17.31_PM-352x282.png" alt="" width="352" height="282" /> Image Credit: http://mlg.eng.cam.ac.uk/zoubin/
+<img class="wp-image-6502 size-medium" src="https://haystax.com/wp-content/uploads/2018/05/Screen_Shot_2018-04-25_at_1.17.31_PM-352x282.png" alt="" width="352" height="282" /> Image Credit: http://mlg.eng.cam.ac.uk/zoubin/
 
 In this framework, a **model** is defined as a description of data one could observe from a system. In other words, a model is a set of assumptions that describe the process by which the observed data was generated. This model can be developed graphically inform of a Probabilistic Graphical Model (PGM) as illustrated in the Figure below.
 
-<img class="aligncenter wp-image-6503" src="http://haystax.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-21-at-3.19.02-PM-1024x491.png" alt="" width="600" height="288" />
+<img class="aligncenter wp-image-6503" src="https://haystax.com/wp-content/uploads/2018/05/Screen-Shot-2018-05-21-at-3.19.02-PM-1024x491.png" alt="" width="600" height="288" />
 
 In the Figure above, the circular nodes represent random variables for the uncertain quantities (e.g. unusual volume or unusual period) and the square nodes represent the uncertainty over the corresponding quantities (e.g. probability of unusual volume). The downward arrow shows the direction of the process that generated the data. The upward arrow shows the direction of inference, that is, given observed data we can learn the parameters of the probability distributions that generated the observed data. As we observe more and more data, our uncertainty over the random variables (e.g. unusual volume) decreases. This is the modern view of machine learning according to Prof. Chris Bishop of Microsoft Research.
 
