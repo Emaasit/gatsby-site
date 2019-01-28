@@ -6,6 +6,8 @@ import ArticleList from '../components/ArticleList'
 import config from '../../config'
 import Layout from '../components/Layout'
 
+require(`katex/dist/katex.min.css`)
+
 const PaginationLink = props => {
   if (!props.test) {
     return (

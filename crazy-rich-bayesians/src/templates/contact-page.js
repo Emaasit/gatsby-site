@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import ContactPageTemplate from '../components/ContactPageTemplate'
 import Layout from '../components/Layout'
 
+require(`katex/dist/katex.min.css`)
+
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (

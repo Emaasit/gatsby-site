@@ -2,7 +2,7 @@
 templateKey: article-page
 title: Gaussian Processes with Spectral Mixture Kernels to Implicitly Capture Hidden Structure from Data
 date: 2018-03-19T19:29:55.624Z
-cover: /img/gatsby-image-workarounds.jpeg
+cover: /img/gaussian_process_spectral_mixture_kernel.png
 tags:
   - GaussianProcess
   - SpectralMixtureKernels
