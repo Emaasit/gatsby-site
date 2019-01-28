@@ -46,7 +46,7 @@ export default class IndexPage extends Component {
           <script type='application/ld+json'>
             {JSON.stringify(websiteSchemaOrgJSONLD)}
           </script>
-          <link rel='canonical' href='https://theleakycauldronblog.com/' />
+          <link rel='canonical' href='https://danielemaasit.com/' />
         </Helmet>
         <div>
 

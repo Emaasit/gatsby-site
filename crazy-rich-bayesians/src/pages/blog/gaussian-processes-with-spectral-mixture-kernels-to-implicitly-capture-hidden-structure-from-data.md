@@ -56,7 +56,7 @@ Mathematical details of the proposed model formulation are described in a corres
 
 A Brief description of the fundamental concepts of the proposed methodology are as follows. Consider for each data point, $latex i$, that $latex y_i$ represents the attachment size in emails sent by an insider to their home account and $latex x_i$ is a temporal covariate such as month. The task is to estimate a latent function $latex f$, which maps input data, $latex x_i$, to output data $latex y_i$ for $latex i$ = 1, 2, $latex \ldots{}$, $latex N$, where $latex N$ is the total number of data points. Each of the input data $latex x_i$ is of a single dimension $latex D = 1$, and $latex \textbf{X}$ is a $latex N$ x $latex D$ matrix with rows $latex x_i$.
 
-<img class="size-medium wp-image-6429 aligncenter" src="http://haystax.com/wp-content/uploads/2018/03/gp-pgm-352x300.png" alt="" width="352" height="200" />
+<img class="size-medium wp-image-6429 aligncenter" src="https://haystax.com/wp-content/uploads/2018/03/gp-pgm-352x300.png" alt="" width="352" height="200" />
 
 The observations are assumed to satisfy:
 \begin{equation}\label{eqn:additivenoise}
