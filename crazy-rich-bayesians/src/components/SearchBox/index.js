@@ -36,7 +36,7 @@ export default class SearchBox extends Component {
       <div className='measure center pa3'>
         <fieldset className='cf bn ma0 pa0'>
           <div className='cf'>
-            <small id='name-desc' className='f6 black-60 db mb2 tr' style={{ cursor: 'pointer' }}
+            <small id='name-desc' className='f6 fw3 black-60 db mb2 tr' style={{ cursor: 'pointer' }}
               onClick={() => window.history.back()}>Close
             </small>
             <label className='clip' htmlFor='search'>Search</label>
@@ -61,7 +61,7 @@ export default class SearchBox extends Component {
               </article>
             ))
           : <div>
-            <p className='fw1 i tc mt4 mt5-l f4 f3-l'>Are you looking for one of these?</p>
+            <p className='fw4 i tc mt4 mt5-l f4 f3-l'>Are you looking for one of these?</p>
             <ul className='list tc pl0 w-100 mt5'>
               <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-blue' to='/'
                 replace>Home</Link>

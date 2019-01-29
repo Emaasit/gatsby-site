@@ -12,13 +12,13 @@ const AboutPageTemplate = ({ title, content, image, contentComponent }) => {
           <h1 className='f2 lh-title fw4 mb3 mt0 pt3 bt bw2 avenir'>
             {title}
           </h1>
-          <h2 className='f3 mid-gray lh-title avenir fw2'>
+          <h2 className='f3 mid-gray lh-title avenir fw4'>
           Bayesian Modeling, Machine Learning, Behavior Analytics and Startups
           </h2>
-          <time className='f6 ttu tracked gray'>Crazy Rich Bayesians</time>
+          <time className='f6 ttu tracked gray fw4'>Crazy Rich Bayesians</time>
         </header>
         <div className='fn fl-ns w-50-ns'>
-          <PageContent content={content} className='avenir lh-copy measure f4 mt0 fw1' />
+          <PageContent content={content} className='avenir lh-copy measure f4 mt0 fw4' />
         </div>
       </article>
     </section>

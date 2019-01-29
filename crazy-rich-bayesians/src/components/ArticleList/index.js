@@ -14,8 +14,8 @@ const ArticleList = ({ posts }) => {
               <div className='flex flex-column flex-row-ns'>
                 <div className='w-100 w-60-ns pr3-ns order-2 order-1-ns'>
                   <Link className='db ph0-l no-underline black dim' to={post.fields.slug}>
-                    <h1 className='f3 fw1 baskerville mt0 lh-title'>{post.frontmatter.title}</h1>
-                    <p className='f6 f5-l lh-copy fw1'>
+                    <h1 className='f3 fw4 baskerville mt0 lh-title'>{post.frontmatter.title}</h1>
+                    <p className='f6 f5-l lh-copy fw4'>
                       {post.excerpt}
                     </p>
                   </Link>
@@ -33,7 +33,7 @@ const ArticleList = ({ posts }) => {
                   </Link>
                 </div>
               </div>
-              <time className='f6 db gray'>{post.frontmatter.date}</time>
+              <time className='f6 db gray fw5'>{post.frontmatter.date}</time>
               <div className='flex pv2 ph0'>
                 {post.frontmatter.tags.map(tag => (
                   <Link

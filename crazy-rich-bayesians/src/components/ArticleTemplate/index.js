@@ -21,7 +21,7 @@ const ArticleTemplate = ({
     <article className='baskerville pb3'>
       <section className='mw8 center'>
         <header className='avenir tc-l ph3 ph4-ns pt4 pt5-ns'>
-          <h1 className='f3 f2-m f-subheadline-l measure lh-title fw1 mt0'>{title}</h1>
+          <h1 className='f3 f2-m f-subheadline-l measure lh-title fw4 mt0'>{title}</h1>
           <div className='flex db mb4'>
             <time className='f5 f4-l db fw1 baskerville mb4-l mb2'>{config.userName} | {date}</time>
             <div className='inline-flex flex-wrap'>
@@ -32,7 +32,7 @@ const ArticleTemplate = ({
                     key={tag}
                     className='no-underline black dim avenir'
                   >
-                    <small className='f6 f4-l fw1'>#{tag}&nbsp;&nbsp;</small>
+                    <small className='f6 f4-l fw4'>#{tag}&nbsp;&nbsp;</small>
                   </Link>
                 ))}
             </div>
