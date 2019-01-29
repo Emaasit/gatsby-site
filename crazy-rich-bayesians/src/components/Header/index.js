@@ -9,9 +9,9 @@ const Header = () => (
     <nav className='bt bb tc mw8 center mt4'>
       <Link className='f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l' to='/'>Home</Link>
       <Link className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' to='/about'>About</Link>
-      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://scholar.google.com/citations?user=kALpX2wAAAAJ&hl=en' target='_blank'>Publications</a>
-      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://www.dropbox.com/s/j9jobrzdknz6mma/CV_Daniel_Emaasit.pdf?dl=0' target='_blank'>CV</a>
-      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://github.com/Emaasit' target='_blank'>Software</a>
+      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://scholar.google.com/citations?user=kALpX2wAAAAJ&hl=en' target='_blank' rel='noopener nofollow noreferrer'>Publications</a>
+      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://www.dropbox.com/s/j9jobrzdknz6mma/CV_Daniel_Emaasit.pdf?dl=0' target='_blank' rel='noopener nofollow noreferrer'>CV</a>
+      <a className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' href='https://github.com/Emaasit' target='_blank' rel='noopener nofollow noreferrer'>Software</a>
       <Link className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l'
         to='/contact?no-cache=1'>Contact</Link>
       <Link className='f6 f5-l link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' to='/search'>Search</Link>
