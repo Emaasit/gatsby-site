@@ -1,14 +1,14 @@
 ---
 templateKey: about-page
 title: About This Blog
-image: /img/daniel_emaasit_probprog.jpg
+image: "/img/daniel-emaasit-probprog-MIT.jpg"
 meta_title: About | Crazy Rich Bayesians
 meta_description: >-
   Crazy Rich Bayesians is the personal blog of Daniel Emaasit. Topics include Bayesian modeling, machine learning, behavior analytics and startups.
 ---
 **Crazy Rich Bayesians** is the personal blog of **Daniel Emaasit**. (*As you may have already guessed, this blog's name is inspired by the Hollywood movie [**Crazy Rich Asians**](https://en.wikipedia.org/wiki/Crazy_Rich_Asians_(film))*)
 
-![Daniel Emaasit](/img/daniel_emaasit_probprog_MIT.jpg)
+![Daniel Emaasit](/img/daniel-emaasit-probprog-MIT.jpg)
 
 I am a Data Scientist at [Haystax](https://www.haystax.com/) in Washington, D.C. My interests involve developing principled [probabilistic models](http://mlg.eng.cam.ac.uk/zoubin/bayesian.html) for problems where training data are scarce by leveraging knowledge from subject-matter experts and context information. In particular, I am interested in [flexible probabilistic machine learning](http://mlg.eng.cam.ac.uk/pub/topics/#np) methods, such as Gaussian processes and Dirichlet processes, and data-efficient learning methods such as [Bayesian optimization](https://arxiv.org/abs/1012.2599) & [Model-based Reinforcement Learning](https://arxiv.org/abs/1706.06491).
 

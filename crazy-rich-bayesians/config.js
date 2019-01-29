@@ -6,7 +6,7 @@ module.exports = {
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-business/.
   siteDescription: 'Bayesian Modeling, Machine Learning, Behavior Analytics and Startups', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml',
-  googleTagManagerID: 'GTM-MPPQV7M', // GTM tracking ID.
+  googleTagManagerID: 'GTM-WVSPX3X', // GTM tracking ID.
   disqusShortname: 'emaasit', // Disqus shortname.
   userName: 'Daniel Emaasit',
   userTwitter: 'emaasit',
