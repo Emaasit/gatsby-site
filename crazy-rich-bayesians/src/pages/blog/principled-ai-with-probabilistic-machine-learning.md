@@ -2,7 +2,7 @@
 templateKey: article-page
 title: Principled AI with Probabilistic Machine Learning
 date: 2018-05-22T19:29:55.624Z
-cover: /img/bayes_theorem_neon_lights.jpg
+cover: "/img/bayes-theorem-neon-lights.jpg"
 tags:
   - PrincipledAI
   - MachineLearning

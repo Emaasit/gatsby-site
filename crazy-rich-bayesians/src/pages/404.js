@@ -11,10 +11,10 @@ const NotFoundPage = () => (
     <p className='fw1 i tc mt4 mt5-l f4 f3-l'>Are you looking for one of these?</p>
     <ul className='list tc pl0 w-100 mt5'>
       <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-blue' to='/' replace>Home</Link></li>
-      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-green' to='/about' replace>About</Link></li>
-      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-yellow' to='/contact' replace>Contact</Link>
+      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-blue' to='/about' replace>About</Link></li>
+      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-blue' to='/contact' replace>Contact</Link>
       </li>
-      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-purple' to='/tags' replace>Tags</Link></li>
+      <li className='dib'><Link className='f5 f4-ns link black db pv2 ph3 hover-light-blue' to='/tags' replace>Tags</Link></li>
     </ul>
   </section>
 )
