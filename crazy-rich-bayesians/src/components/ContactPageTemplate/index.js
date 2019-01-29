@@ -18,7 +18,7 @@ const ContactPageTemplate = ({
         <div className='mt3'>
           <div className='pa3 measure center bb'>
             <h1 className='f2 lh-title fw4 mb3 mt0 pt3 bw2 avenir'>{title}</h1>
-            <h2 className='f3 mid-gray lh-title avenir fw2'>{subtitle}</h2>
+            <h2 className='f3 mid-gray lh-title avenir fw4'>{subtitle}</h2>
           </div>
           <form className='pa5 black-80 measure center'
             name='contact'

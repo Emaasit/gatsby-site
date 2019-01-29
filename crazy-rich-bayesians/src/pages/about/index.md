@@ -6,7 +6,7 @@ meta_title: About | Crazy Rich Bayesians
 meta_description: >-
   Crazy Rich Bayesians is the personal blog of Daniel Emaasit. Topics include Bayesian modeling, machine learning, behavior analytics and startups.
 ---
-**Crazy Rich Bayesians** is the personal blog of **Daniel Emaasit**. (*As you may have already guessed, this blog's name is inspired by the Hollywood movie [**Crazy Rich Asians**](https://en.wikipedia.org/wiki/Crazy_Rich_Asians_(film))*)
+**Crazy Rich Bayesians** is the personal blog of **Daniel Emaasit**. (<font size="4">*As you may have already guessed, this blog's name is inspired by the Hollywood movie [**Crazy Rich Asians**](https://en.wikipedia.org/wiki/Crazy_Rich_Asians_(film))*</font>)
 
 ![Daniel Emaasit](/img/daniel-emaasit-probprog-MIT.jpg)
 
