@@ -19,7 +19,7 @@ Having limited and quite noisy data for insider-threat detection presents a majo
 
 First, the methods involve visualizing the time series for noticeable structure and patterns such as periodicity, smoothness, growing/decreasing trends and then hard-coding these patterns into the statistical models during formulation. This approach is suitable for large datasets where more data typically provides more information to learn expressive structure. Given limited amounts of data, such expressive structure may not be easily noticeable. For instance, the figure below shows monthly attachment size in emails (in Gigabytes) sent by an insider from their employee account to their home account. Trends such as periodicity, smoothness, growing/decreasing trends are not easily noticeable.
 
-<img src="https://github.com/Emaasit/long-range-extrapolation/blob/dev/blog/data-emails.png?raw=true" width="600" height="200" />
+<img src="https://github.com/Emaasit/long-range-extrapolation/blob/dev/blog/data-emails.png?raw=true" />
 
 Second, most of the current literature focuses on parametric models that impose strong restrictive assumptions by pre-specifying the functional form and number of parameters. Pre-specifying a functional form for a time-series model could lead to either overly complex model specifications or simplistic models. It is difficult to know *a priori* the most appropriate function to use for modeling sophisticated insider-threat behavior that involve complex hidden patterns and many other influencing factors.
 
@@ -54,33 +54,36 @@ Mathematical details of the proposed model formulation are described in a corres
 
 * Emaasit, D. and Johnson, M. (2018). [Capturing Structure Implicitly from Noisy Time-Series having Limited Data](https://arxiv.org/abs/1803.05867). arXiv preprint arXiv:1803.05867.
 
-A Brief description of the fundamental concepts of the proposed methodology are as follows. Consider for each data point, $latex i$, that $latex y_i$ represents the attachment size in emails sent by an insider to their home account and $latex x_i$ is a temporal covariate such as month. The task is to estimate a latent function $latex f$, which maps input data, $latex x_i$, to output data $latex y_i$ for $latex i$ = 1, 2, $latex \ldots{}$, $latex N$, where $latex N$ is the total number of data points. Each of the input data $latex x_i$ is of a single dimension $latex D = 1$, and $latex \textbf{X}$ is a $latex N$ x $latex D$ matrix with rows $latex x_i$.
+A Brief description of the fundamental concepts of the proposed methodology are as follows. Consider for each data point, $i$, that $y_i$ represents the attachment size in emails sent by an insider to their home account and $x_i$ is a temporal covariate such as month. The task is to estimate a latent function $f$, which maps input data, $x_i$, to output data $y_i$ for $i$ = 1, 2, $\ldots{}$, $N$, where $N$ is the total number of data points. Each of the input data $x_i$ is of a single dimension $D = 1$, and $\textbf{X}$ is a $N$ x $D$ matrix with rows $x_i$.
 
-<img class="size-medium wp-image-6429 aligncenter" src="https://haystax.com/wp-content/uploads/2018/03/gp-pgm-352x300.png" alt="" width="352" height="200" />
+<img src="https://haystax.com/wp-content/uploads/2018/03/gp-pgm-352x300.png" alt=""/>
 
 The observations are assumed to satisfy:
-\begin{equation}\label{eqn:additivenoise}
+
+$$
 y_i = f(x_i) + \varepsilon, \quad where \, \, \varepsilon \sim \mathcal{N}(0, \sigma_{\varepsilon}^2)
-\end{equation}
-The noise term, $latex \varepsilon$, is assumed to be normally distributed with a zero mean and variance, $latex \sigma_{\varepsilon}^2$. Latent function $latex f$ represents hidden underlying trends that produced the observed time-series data.
+$$
 
-Given that it is difficult to know $latex \textit{a priori}$ the most appropriate functional form to use for $latex f$, a prior distribution, $latex p(\textbf{f})$, over an infinite number of possible functions of interest is formulated. A natural prior over an infinite space of functions is a Gaussian process prior (Williams and Rasmussen, 2006). A GP is fully parameterized by a mean function, $latex \textbf{m}$, and covariance function, $latex \textbf{K}_{N,N}$, denoted as:
-\begin{equation}\label{eqn:gpsim}
+The noise term, $\varepsilon$, is assumed to be normally distributed with a zero mean and variance, $\sigma_{\varepsilon}^2$. Latent function $f$ represents hidden underlying trends that produced the observed time-series data.
+
+Given that it is difficult to know *a priori* the most appropriate functional form to use for $f$, a prior distribution, $p(\textbf{f})$, over an infinite number of possible functions of interest is formulated. A natural prior over an infinite space of functions is a Gaussian process prior (Williams and Rasmussen, 2006). A GP is fully parameterized by a mean function, $\textbf{m}$, and covariance function, $\textbf{K}_{N,N}$, denoted as:
+
+$$
 \textbf{f} \sim \mathcal{GP}(\textbf{m}, \textbf{K}_{N,N}),
-\end{equation}
+$$
 
-The posterior distribution over the unknown function evaluations, $latex \textbf{f}$, at all data points, $latex x_i$, was estimated using Bayes theorem as follows:
-\begin{equation}\label{eqn:bayesinfty}
-\begin{aligned}
-p(\textbf{f} \mid \textbf{y},\textbf{X}) &amp;= \frac{p(\textbf{y} \mid \textbf{f}, \textbf{X}) \, p(\textbf{f})}{p(\textbf{y} \mid \textbf{X})} = \frac{p(\textbf{y} \mid \textbf{f}, \textbf{X}) \, \mathcal{N}(\textbf{f} \mid \textbf{m}, \textbf{K}_{N,N})}{p(\textbf{y} \mid \textbf{X})},
-\end{aligned}
-\end{equation}
+The posterior distribution over the unknown function evaluations, $\textbf{f}$, at all data points, $x_i$, was estimated using Bayes theorem as follows:
+
+$$
+p(\textbf{f} \mid \textbf{y},\textbf{X}) = \frac{p(\textbf{y} \mid \textbf{f}, \textbf{X}) \, p(\textbf{f})}{p(\textbf{y} \mid \textbf{X})} = \frac{p(\textbf{y} \mid \textbf{f}, \textbf{X}) \, \mathcal{N}(\textbf{f} \mid \textbf{m}, \textbf{K}_{N,N})}{p(\textbf{y} \mid \textbf{X})},
+$$
+
 where:
 
-$latex p(\textbf{f}\mid \textbf{y},\textbf{X})$ = the posterior distribution of functions that best explain the email-attachment size, given the covariates
-$latex p(\textbf{y} \mid \textbf{f}, \textbf{X})$ = the likelihood of email-attachment size, given the functions and covariates
-$latex p(\textbf{f})$ = the prior over all possible functions of email-attachment size
-$latex p(\textbf{y} \mid \textbf{X})$ = the data (constant)
+- $p(\textbf{f}\mid \textbf{y},\textbf{X})$ = the posterior distribution of functions that best explain the email-attachment size, given the covariates
+- $p(\textbf{y} \mid \textbf{f}, \textbf{X})$ = the likelihood of email-attachment size, given the functions and covariates
+- $p(\textbf{f})$ = the prior over all possible functions of email-attachment size
+- $p(\textbf{y} \mid \textbf{X})$ = the data (constant)
 
 This posterior is a Gaussian process composed of a distribution of possible functions that best explain the time-series pattern.
 
@@ -264,15 +267,14 @@ emails_per_month
 
 ```python
 fig, ax = plt.subplots()
-sns.barplot(data = emails_per_month, x = "ds", y = "y", ax = ax)
-ax.set_xticklabels(labels = emails_per_month["ds"], rotation = 45)
-ax.set_xlabel("Months of the Year")
-ax.set_ylabel("Number of Emails")
-ax.set_title("Number of Emails sent Monthly");
+sns.barplot(data = emails_per_month, x = "ds", y = "y", color = "blue", saturation = .5)
+ax.set_xticklabels(labels = emails_per_month.ds, rotation = 45)
+ax.set_xlabel('Time')
+ax.set_ylabel('Total size of emails in GB');
 ```
 
 
-![png](output_13_0.png)
+![png](/img/output-12-0.png)
 
 
 Here, we look at the case where the insider email IP to their home account. The data is resampled per month and the anomalous behavior is clearly visible
@@ -304,22 +306,20 @@ df.y = df.y/1e6
 
 
 ```python
-from datetime import datetime
-df["ds"] = df.apply(lambda x: datetime.date(x["ds"]), axis = 1)
+df["ds"] = df["ds"].apply(lambda x: x.strftime('%Y-%m')).astype(str)
 ```
 
 
 ```python
 fig, ax = plt.subplots()
-sns.barplot(data = df, x = "ds", y = "y")
+sns.barplot(data = df, x = "ds", y = "y", color = "blue", saturation = .5)
 ax.set_xticklabels(labels = df.ds, rotation = 45)
-ax.set_xlabel("Time")
-ax.set_ylabel("Number of Emails ($10^6$)");
-# ax.set_title("Number of Emails sent Monthly");
+ax.set_xlabel('Time')
+ax.set_ylabel('Total size of emails in GB');
 ```
 
 
-![png](output_17_0.png)
+![png](/img/output-16-0.png)
 
 
 
@@ -351,7 +351,7 @@ plt.legend(loc = "best");
 ```
 
 
-![png](output_20_0.png)
+![png](/img/output-20-0.png)
 
 
 ### Empirical analysis
@@ -467,7 +467,7 @@ plotprediction(m);
 ```
 
 
-![png](output_27_0.png)
+![png](/img/output-26-0.png)
 
 
 
@@ -585,7 +585,7 @@ plotprediction(m);
 ```
 
 
-![png](output_33_0.png)
+![png](/img/output-34-0.png)
 
 
 

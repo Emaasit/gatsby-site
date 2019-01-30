@@ -43,25 +43,24 @@ In this framework, a **model** is defined as a description of data one could obs
 In the Figure above, the circular nodes represent random variables for the uncertain quantities (e.g. unusual volume or unusual period) and the square nodes represent the uncertainty over the corresponding quantities (e.g. probability of unusual volume). The downward arrow shows the direction of the process that generated the data. The upward arrow shows the direction of inference, that is, given observed data we can learn the parameters of the probability distributions that generated the observed data. As we observe more and more data, our uncertainty over the random variables (e.g. unusual volume) decreases. This is the modern view of machine learning according to Prof. Chris Bishop of Microsoft Research.
 
 Learning follows from two simple rules of probability, namely:
-<ul>
- 	<li>The sum rule: $p(\mathbf{\theta}) = \sum_{y} p(\mathbf{\theta}, y)$</li>
- 	<li>The product rule: $p(\mathbf{\theta}, y) = p(\mathbf{\theta}) p(y \mid \mathbf{\theta})$</li>
-</ul>
+
+- The sum rule: $p(\mathbf{\theta}) = \sum_{y} p(\mathbf{\theta}, y)$
+- The product rule: $p(\mathbf{\theta}, y) = p(\mathbf{\theta}) p(y \mid \mathbf{\theta})$
+
 These two rules can be formulated into Bayes Theorem which tells us the new information we have gained about our original hypothesis (or parameters) given observed data.
 
-\begin{equation}\label{eqn:bayes}
-p(\mathbf{\theta}\mid \textbf{y}) = \frac{p(\textbf{y} \mid \mathbf{\theta}) \, p(\mathbf{\theta})}{\textbf{y}},
-\end{equation}
+$$p(\mathbf{\theta}\mid \textbf{y}) = \frac{p(\textbf{y} \mid \mathbf{\theta}) \, p(\mathbf{\theta})}{\textbf{y}}$$,
 
 where:
 
+$$
 \begin{aligned}
 p(\mathbf{\theta}\mid \textbf{y}) &= \text{the posterior distribution of the hypothesis (or parameters), given the observed data} \\
 p(\textbf{y} \mid \mathbf{\theta}) &= \text{the data likelihood, given the hypothesis (or parameters)} \\
 p(\mathbf{\theta}) &= \text{the prior over all possible hypotheses (or parameters)} \\
 p(\textbf{y}) &= \text{the data (constant)}
 \end{aligned}  
-
+$$
 
 The probabilistic approach to machine learning has proven to be preferable to deep learning in many applications that require transparency and oversight. Although deep learning has produced amazing performance on many benchmark tasks in specific applications such as computer vision and conversational AI (e.g in the recent <a href="https://youtu.be/D5VN56jQMWM">Google Duplex</a>), it has several limitations in much more general and broader use cases such as Cybersecurity, and <a href="https://blogs.wsj.com/cio/2018/05/11/bank-of-america-confronts-ais-black-box-with-fraud-detection-effort/">Banking</a>. Deep learning systems are generally:
 

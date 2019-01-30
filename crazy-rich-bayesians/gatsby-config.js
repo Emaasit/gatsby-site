@@ -63,6 +63,7 @@ module.exports = {
               maxWidth: 2048,
             },
           },
+          `gatsby-remark-katex`,
           `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-prismjs`,
@@ -100,7 +101,6 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          `gatsby-remark-katex`,
         ],
       },
     },
