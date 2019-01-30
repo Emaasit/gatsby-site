@@ -10,7 +10,7 @@ meta_title: Principled AI with Probabilistic Machine Learninga
 meta_description: >-
   Last month, I gave a presentation titled *Introduction to Probabilistic Machine Learning using PyMC3* at two local meetup groups (Bayesian Data Science D.C. and Data Science &amp; Cybersecurity) in McLean, Virginia. The following is a summary of the concepts we discussed regarding **Principled AI**.
 ---
-**(Note: Cross-posted with the [Haystax Technology Blog](https://haystax.com/blog/).)**
+**(Note: Cross-posted with the [Haystax Blog](https://haystax.com/blog/).)**
 
 At Haystax Technology, we are proponents and early adopters of principled approaches to machine learning (ML) and artificial intelligence (AI) for cybersecurity.
 

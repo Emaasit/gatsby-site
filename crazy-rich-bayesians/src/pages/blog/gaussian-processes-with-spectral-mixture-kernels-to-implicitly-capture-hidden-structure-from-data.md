@@ -10,7 +10,7 @@ meta_title: Gaussian Processes with Spectral Mixture Kernels to Implicitly Captu
 meta_description: >-
   The scientific field of insider-threat detection often lacks sufficient amounts of time-series training data for the purpose of scientific discovery. Moreover, the available limited data are quite noisy. For instance Greitzer and Ferryman (2013) state that ”ground truth” data on actual insider behavior is typically either not available or is limited.
 ---
-**(Note: Cross-posted with the [Haystax Technology Blog](https://haystax.com/blog/).)**
+**(Note: Cross-posted with the [Haystax Blog](https://haystax.com/blog/).)**
 
 The scientific field of insider-threat detection often lacks sufficient amounts of time-series training data for the purpose of scientific discovery. Moreover, the available limited data are quite noisy. For instance Greitzer and Ferryman (2013) state that ”ground truth” data on actual insider behavior is typically either not available or is limited. In some cases, one might acquire real data, but for privacy reasons, there is no attribution of any individuals relating to abuses or offenses i.e., there is no ground truth. The data may contain insider threats, but these are not identified or knowable to the researcher (Greitzer and Ferryman, 2013; Gheyas and Abdallah, 2016).
 
