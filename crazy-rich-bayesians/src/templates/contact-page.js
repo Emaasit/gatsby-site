@@ -4,6 +4,10 @@ import { graphql } from 'gatsby'
 import ContactPageTemplate from '../components/ContactPageTemplate'
 import Layout from '../components/Layout'
 
+require('./prism.css')
+
+require('prismjs/themes/prism-solarizedlight.css')
+
 require(`katex/dist/katex.min.css`)
 
 const ContactPage = ({ data }) => {

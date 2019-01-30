@@ -6,6 +6,10 @@ import ArticleList from '../components/ArticleList'
 import config from '../../config'
 import Layout from '../components/Layout'
 
+require('./prism.css')
+
+require('prismjs/themes/prism-solarizedlight.css')
+
 require(`katex/dist/katex.min.css`)
 
 const PaginationLink = props => {
