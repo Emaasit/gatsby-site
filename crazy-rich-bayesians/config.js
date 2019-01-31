@@ -7,6 +7,7 @@ module.exports = {
   siteDescription: 'Bayesian Modeling, Machine Learning, Behavior Analytics and Startups', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml',
   googleTagManagerID: 'GTM-WVSPX3X', // GTM tracking ID.
+  googleAnalyticsTrackingID: 'UA-59805065-1', // Google Analytics tracking ID
   disqusShortname: 'emaasit', // Disqus shortname.
   userName: 'Daniel Emaasit',
   userTwitter: 'emaasit',
