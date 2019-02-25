@@ -42,6 +42,7 @@
     "katex": "^0.10.0",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
+    "mixpanel-browser": "^2.26.0",
     "netlify-cms": "^2.3.3",
     "node-sass": "^4.11.0",
     "nvm": "0.0.4",
