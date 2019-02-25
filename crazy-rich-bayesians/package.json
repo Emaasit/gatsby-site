@@ -42,6 +42,7 @@
     "katex": "^0.10.0",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
+    "mixpanel-browser": "^2.26.0",
     "netlify-cms": "^2.3.3",
     "node-sass": "^4.11.0",
     "nvm": "0.0.4",
@@ -52,6 +53,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-katex": "^2.0.2",
+    "react-mixpanel": "^1.0.1",
     "react-share": "^2.4.0",
     "tachyons-sass": "^4.9.5",
     "uglifyjs-webpack-plugin": "^2.1.1"
