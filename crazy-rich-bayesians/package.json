@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.1.1",
-    "gatsby": "^2.0.91",
+    "gatsby": "^2.12.0",
     "gatsby-cli": "^2.4.11",
     "gatsby-image": "^2.0.26",
     "gatsby-paginate": "^1.0.16",
