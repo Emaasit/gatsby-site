@@ -4,17 +4,17 @@ title: Interpretable Machine Learning for Image Classification with LIME
 date: 2019-09-23T00:56:55.624Z
 cover: "/img/blog_limeimg/banner.png"
 tags:
-  - MachineLearning
-  - Interpretability
-  - ImageClassification
-  - LIME
+  - MachineLearning
+  - Interpretability
+  - ImageClassification
+  - LIME
 meta_title: Interpretable Machine Learning for Image Classification with LIME
 meta_description: >-
-  How can you evaluate whether the predictions you get from your machine learning model are reliable? LIME is here to the rescue. LIME (Local Interpretable Model-agnostic Explanations) provides explanations for the predictions of any machine learning technique. In this tutorial, we'll see how it works for image classification tasks. 
+  How can you evaluate whether the predictions you get from your machine learning model are reliable? LIME is here to the rescue. LIME (Local Interpretable Model-agnostic Explanations) provides explanations for the predictions of any machine learning technique. In this tutorial, we'll see how it works for image classification tasks.
 ---
 By: Cristian Arteaga, [arteagac.github.io](https://arteagac.github.io)
 
-LIME (Local Interpretable Model-agnostic Explanations) (Ribeiro et. al. 2016) is a popular technique for interpretability in machine learning. LIME provides individual level explanations (one instance in the dataset at the time) for the predictions of any machine learning technique.  
+LIME (Local Interpretable Model-agnostic Explanations) (Ribeiro et. al. 2016) is a popular technique for interpretability in machine learning. LIME provides individual level explanations (one instance in the dataset at the time) for the predictions of any machine learning technique. 
 
 For the case of image clasification, LIME takes as input the image to be explained and a predictive model, and outputs the area of the image with stronger correlation for certain predictions. For instance, let's take as input the following image and a pretrained InceptionV3 model as the predictive model.
 
@@ -34,7 +34,7 @@ LIME creates explanations by generating a new dataset of random perturbations (w
 
 ### Step 1. Create random perturbations of instance being explained
 In the context of image classification, generating perturbations means to compute superpixels in the image being explained and then randomly turn on and off some of the superpixels.
-After computing the superpixels in the image we get something like this:   
+After computing the superpixels in the image we get something like this:
 ![png](/img/blog_limeimg/superpixels.png)
 
 In order to randomly turn on and off some superpixels we can create a random vector with zeros and ones. Each position in such vector represents whether a superpixel is on (one) or off (zero). Such random vector would look like this: `[1, 0, 0, 1, 0, ...]`. After we generate several of this random vectors we get a **new dataset of perturbations** that can be translated to images like the following:
@@ -51,7 +51,7 @@ In order to randomly turn on and off some superpixels we can create a random vec
 ```perturbation4 = [1, 1, 1, 0, 0, ...]```
 ![png](/img/blog_limeimg/perturb4.png)
 
-In this example we are showing only a dataset with 4 perturbations. However, in practice, a larger number of perturbations is required for better results. 
+In this example we are showing only a dataset with 4 perturbations. However, in practice, a larger number of perturbations is required for better results.
 
 ### Step 2. Compute predictions for the new generated dataset
 The InceptionV3 model is used to predict the class of the new generated images. Remeber that InceptionV3 has 1,000 output classes so the prediction consist of the probability that each image belongs to such 1,000 classes. However, for our example, we will take only the probability for the class "Labrador Retriever". In other words, for each perturbation now we have a probability for the class "Labrador Retriever". For instance:
@@ -63,7 +63,7 @@ P(class labrador|perturbation3) = 0.82
 P(class labrador|perturbation4) = 0.01
 ```
 
-Therefore, now we have everything to fit a linear model using:   
+Therefore, now we have everything to fit a linear model using:
 ```X = perturbations;   y = predictions for labrador = P(class labrador|perturbations)```
 
 However, before we fit a linear model, LIME needs to give more weight (importance) to images that are closer to the image being explained. This will be done in the next step.

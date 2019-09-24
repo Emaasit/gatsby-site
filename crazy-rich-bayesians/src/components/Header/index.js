@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import * as config from '../../../config'
+import mixpanel from 'mixpanel-browser';
+import { MixpanelProvider, MixpanelConsumer } from 'react-mixpanel';
 
 const Header = () => (
   <header className='bg-white black-80 tc pv4 avenir'>
@@ -16,6 +18,11 @@ const Header = () => (
         to='/contact?no-cache=1'>Contact</Link>
       <Link className='f6 f5-l fw5 link bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l' to='/search'>Search</Link>
     </nav>
+    {/* <script type="text/javascript">
+    mixpanel.track_links("#nav a", "click nav link", {
+      "referrer": document.referrer
+      });
+    </script> */}
   </header>
 )
 
